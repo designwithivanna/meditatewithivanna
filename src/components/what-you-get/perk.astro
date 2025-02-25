@@ -11,21 +11,23 @@ const { number, title } = Astro.props;
 ---
 
 <div
-  class="bg-[#2B2A26] rounded-3xl border border-[#565656] p-5 lg:p-[30px] text-white perk"
+  class="bg-[#2B2A26] rounded-3xl border border-[#565656] p-3 md:p-5 lg:p-[30px] text-white perk"
 >
   <div class="flex items-center justify-between">
-    <div class="flex items-center gap-5">
+    <div class="flex items-center gap-3 md:gap-5">
       <span
-        class="text-xl lg:text-[25px] size-[46px] items-center inline-flex justify-center bg-[#8C6546] rounded-full"
+        class="md:text-xl shrink-0 lg:text-[25px] size-8 lg:size-[46px] items-center inline-flex justify-center bg-[#8C6546] rounded-full"
       >
         {number}
       </span>
-      <h3 class="text-2xl lg:text-[36px] leading-[46px]">{title}</h3>
+      <h3 class="md:text-2xl lg:text-[36px] text-left md:leading-[46px]">
+        {title}
+      </h3>
     </div>
-    <button class="p-1 hidden close [&_svg]:fill-current">
+    <button class="p-1 hidden close [&_svg]:fill-current [&_svg]:size-6">
       <Fragment set:html={Minus} />
     </button>
-    <button class="p-1 open [&_svg]:fill-current">
+    <button class="p-1 open [&_svg]:fill-current [&_svg]:size-6">
       <Fragment set:html={Plus} />
     </button>
   </div>
