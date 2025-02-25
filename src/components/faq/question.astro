@@ -21,10 +21,10 @@ const { question } = Astro.props;
       <slot />
     </p>
   </div>
-  <button class="p-1 hidden close">
+  <button class="p-1 hidden close [&_svg]:fill-current">
     <Fragment set:html={Minus} />
   </button>
-  <button class="p-1 open">
+  <button class="p-1 open [&_svg]:fill-current">
     <Fragment set:html={Plus} />
   </button>
 </div>
