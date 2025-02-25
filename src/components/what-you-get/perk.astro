@@ -11,16 +11,16 @@ const { number, title } = Astro.props;
 ---
 
 <div
-  class="bg-[#2B2A26] rounded-3xl border border-[#565656] p-[30px] text-white perk"
+  class="bg-[#2B2A26] rounded-3xl border border-[#565656] p-5 lg:p-[30px] text-white perk"
 >
   <div class="flex items-center justify-between">
     <div class="flex items-center gap-5">
       <span
-        class="text-[25px] size-[46px] items-center inline-flex justify-center bg-[#8C6546] rounded-full"
+        class="text-xl lg:text-[25px] size-[46px] items-center inline-flex justify-center bg-[#8C6546] rounded-full"
       >
         {number}
       </span>
-      <h3 class="text-[36px] leading-[46px]">{title}</h3>
+      <h3 class="text-2xl lg:text-[36px] leading-[46px]">{title}</h3>
     </div>
     <button class="p-1 hidden close [&_svg]:fill-current">
       <Fragment set:html={Minus} />
@@ -31,7 +31,7 @@ const { number, title } = Astro.props;
   </div>
   <p
     style="max-height: 0;"
-    class="text-xl leading-[30px] text-left overflow-hidden answer transition-all duration-700 xl:text-xl"
+    class="lg:text-xl leading-[30px] text-left overflow-hidden answer transition-all duration-700"
   >
     <slot />
   </p>
